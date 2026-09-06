@@ -4,9 +4,6 @@ This repository contains the implementation of **Reference-Guided Contrastive
 Learning and Clustering Constraint (RGCC)** for binary classification of
 glioblastoma (GBM) and solitary brain metastasis (SBM) from MRI.
 
-## Model Weights
-
-The trained model weights are available in the **Releases** section of this repository.
 
 ## Environment
 
@@ -65,6 +62,9 @@ python train.py
 C D H W (channels, depth, height, width).
 
 If no pretrained checkpoint is used, supply an empty string for --pre_train
+
+
+## Model Weights
 
 The trained model weights are available in
 https://drive.google.com/drive/folders/1nq321XjIdh-4C-F8JL1Pni86nYDFXTM5?usp=drive_link
