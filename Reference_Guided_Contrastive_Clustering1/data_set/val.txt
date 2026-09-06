@@ -1,0 +1,7 @@
+sample_id label
+e.g.
+case_0101 0
+case_0102 1
+case_0103 0
+case_0104 1
+......
