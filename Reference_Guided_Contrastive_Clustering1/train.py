@@ -1,7 +1,3 @@
-'''
-train self supervised model: image+image or image+radio
-'''
-
 import argparse
 import os
 import time
