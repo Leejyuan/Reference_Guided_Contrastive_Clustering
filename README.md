@@ -65,3 +65,6 @@ python train.py
 C D H W (channels, depth, height, width).
 
 If no pretrained checkpoint is used, supply an empty string for --pre_train
+
+The trained model weights are available in the **Releases** section of this repository.
+
