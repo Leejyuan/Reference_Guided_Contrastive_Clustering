@@ -1,7 +1,3 @@
-'''
-train self supervised model: image+image or image+radio
-'''
-
 import argparse
 import os
 import time
@@ -123,8 +119,8 @@ def parse_option():
     # file settings
     parser.add_argument("--data_path", type=str, default='' )    
     
-    parser.add_argument("--data_shape", type=str, default=[3,16, 384, 384])
-    parser.add_argument("--crop_scale", type=float, default=[3,16, 384, 384])
+    parser.add_argument("--data_shape", type=str)
+    parser.add_argument("--crop_scale", type=float)
     
     parser.add_argument("--classify_num", type=int, default=2)
     
@@ -136,9 +132,6 @@ def parse_option():
     parser.add_argument('--model', type=str, default="dense121_3D",
                         choices=["dense121_3D", "resnet50"])
     parser.add_argument('--feat_dim', type=int, default=128, help='dim of feat for inner product')
-    parser.add_argument("--print_freq", type=int, default=5)
-    parser.add_argument("--save_freq", type=int, default=5)
-    parser.add_argument("--val_freq", type=int, default=1)
     
     parser.add_argument("--batch_size", type=int, default=8)
     
@@ -148,9 +141,9 @@ def parse_option():
   
     parser.add_argument("--save_folder", type=str, default='')
     parser.add_argument("--sub_save_folder", type=str, default='')
-    parser.add_argument('--ckpt_epoch', default='')    #57 40
+    parser.add_argument('--ckpt_epoch', default='') 
 
-    parser.add_argument("--folder_name", type=str, default='fold5_0')  #!!!
+    parser.add_argument("--folder_name", type=str, default='fold5_0') 
     parser.add_argument("--check_mode", type=str, default="train",choices=["test", "train"])
     parser.add_argument('--model_mode',  default='clu')
     parser.add_argument('--data_domain',  type=int, default=3)
